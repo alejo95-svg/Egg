@@ -31,8 +31,6 @@ Algoritmo sin_titulo
 			
 			Mientras cont < 3 Hacer
 				
-
-				
 				Si nota >= 0 y nota <= 10 Entonces
 					
 					cont = cont + 1
@@ -92,9 +90,6 @@ Algoritmo sin_titulo
 			leer nombre
 			
 			Borrar Pantalla
-			
-		
-		
 			
 	Fin Mientras
 		
