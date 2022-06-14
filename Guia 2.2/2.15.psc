@@ -25,8 +25,6 @@ Algoritmo sin_titulo
 		
 		Para j = 1 Hasta i  Con Paso 1 Hacer
 			
-			
-			
 			Escribir Sin Saltar j
 			
 			si i > 1 y j < i  Entonces
