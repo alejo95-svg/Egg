@@ -21,7 +21,7 @@ Algoritmo sin_titulo
 	
 	Para i = 1 Hasta factorial Con Paso 1 Hacer
 		
-		Escribir sin saltar " !",i, " = " 
+		Escribir sin saltar " !", i, " = " 
 		
 		Para j = 1 Hasta i  Con Paso 1 Hacer
 			
