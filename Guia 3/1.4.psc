@@ -10,6 +10,7 @@ Algoritmo sin_titulo
 	
 	Escribir "Ingrese la letra que desea buscar: "
 	leer letra
+	
 	lcant = bletra(palabra, letra)
 	
 	si lcant = 1 Entonces

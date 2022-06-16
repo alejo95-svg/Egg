@@ -16,6 +16,8 @@ FinAlgoritmo
 
 
 Funcion total = suma (num1 Por Referencia, num2 Por Referencia)
+	
 	Definir total Como Entero
 	total = num1 + num2
+	
 FinFuncion
