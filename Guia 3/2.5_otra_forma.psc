@@ -14,22 +14,36 @@ FinAlgoritmo
 
 Funcion suma = sumar (num Por Valor)
 	
-	Definir suma, digito, residuo Como Real
-	
+	Definir suma, digito, mult Como Real
+
 	digito = num
-	
+	mult = 1
 	suma = 0
 	
 	Mientras digito <> 0 Hacer
 		
-		residuo = trunc(digito) MOD 10
+		digito = num
 		
-		digito = trunc(digito) / 10
+		mientras trunc(digito/10) <> 0 Hacer
+			
+			si trunc(digito/10) <> 0 Entonces
+				
+				mult = mult * 10
+				
+				digito = trunc(digito / 10)
+				
+			FinSi
+			
+		FinMientras
 		
-		suma = suma + residuo
+		suma =  suma + digito 
+		
+		num = num - (digito * mult)
 	
-		num = trunc(digito)
-	
+//		Escribir digito
+		
+		mult = 1
+		
 	Fin Mientras
 	
 FinFuncion
