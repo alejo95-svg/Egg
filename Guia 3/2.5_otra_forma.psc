@@ -35,7 +35,7 @@ Funcion suma = sumar (num Por Valor)
 			FinSi
 			
 		FinMientras
-		
+		//Escribir "d: ", digito
 		suma =  suma + digito 
 		
 		num = num - (digito * mult)

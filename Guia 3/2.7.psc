@@ -12,6 +12,7 @@
 //			Por lo tanto, si queremos calcular el término "n" debemos escribir una función que reciba
 //				como argumento el valor de "n" y que calcule la serie hasta llegar a ese valor.
 Algoritmo sin_titulo
+	
 	Definir num Como Entero
 	
 	Escribir "Ingrese un numero:"
@@ -23,25 +24,46 @@ FinAlgoritmo
 
 Funcion salida = fibonacci (num)
 	
-	Definir  i, aux, num1, num2 Como Real
-	definir salida Como Caracter
+	Definir num1, num2, num3 Como Real
+	Definir salida Como Caracter
+	Definir bandera Como Logico
 	
 	salida = ""
 	
 	num1 = 0
-	num2 = 1
-	aux = 0
+	num2 = 0
+	num3 = 1
+	bandera = Verdadero
 	
-	Mientras (num1 + num2) <> num Hacer
+	Mientras (num2 + num3) <> num  y bandera = Verdadero Hacer
+
+		num1 = num2 + num3 
+		num2 = num3
+		num3 = num1
 		
-		num1 = num1 + num2 
+		si (num2 + num3) > num Entonces
+			
+			bandera = Falso
+			
+		FinSi
 		
-		num2 = num2 + num1
+//		Escribir num2, "+", num3
 		
 	Fin Mientras
 	
-	salida = Concatenar(ConvertirATexto(num1), "+")
-	salida = Concatenar(salida, ConvertirATexto(num2))
+	si bandera = falso Entonces
+		
+		salida = Concatenar("El numero ", ConvertirATexto(num))
+		salida = Concatenar(salida, " no hace parte de la serie de fibonacci")
+		
+	SiNo
+		
+		salida = Concatenar(ConvertirATexto(num2), "+")
+		salida = Concatenar(salida, ConvertirATexto(num3))
+		
+	FinSi
+	
+
 	
 FinFuncion
 	
