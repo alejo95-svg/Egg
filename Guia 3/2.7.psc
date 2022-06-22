@@ -58,8 +58,9 @@ Funcion salida = fibonacci (num)
 		
 	SiNo
 		
-		salida = Concatenar(ConvertirATexto(num2), "+")
-		salida = Concatenar(salida, ConvertirATexto(num3))
+		salida = Concatenar("La serie de fibonacci para el numero ", ConvertirATexto(num))
+		salida = Concatenar(salida, " es: ")
+		salida = Concatenar(salida, ConvertirATexto(num2) + " + " + ConvertirATexto(num3))
 		
 	FinSi
 	
