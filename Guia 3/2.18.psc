@@ -12,43 +12,40 @@ FinAlgoritmo
 
 Funcion salida = MCD (num1, num2)
 	Definir salida Como Caracter
-	Definir impar, cont Como Entero
+	Definir impar, cont, retorno Como Entero
 	
-	impar = 2
-	
-	si num1 <> 1 y num2 <> 1 Entonces
+	si num2 = 0 Entonces
 		
-		si num1 MOD impar = 0 o num2 MOD impar = 0 Entonces
-			
-			num1 = num1 / impar
-			
-			si num2 MOD impar = 0 Entonces
-				
-				num2 = num2 / impar
-				
-			FinSi
-			
-		SiNo
-			
-			si impar MOD impar = 0 y impar MOD 1 = 0 Entonces
-				
-				
-				
-			SiNo
-				
-				
-				
-			FinSi
-			salida = MCD(num1, num2)
-			
-			
-		FinSi
+		salida = "El maximo comun divisor de "
+		salida = Concatenar(salida, ConvertirATexto(num1))
+		salida = Concatenar(salida, " y ")
+		salida = Concatenar(salida, ConvertirATexto(num2))
+		salida = Concatenar(salida, " es: ")
+		salida = Concatenar(salida, ConvertirATexto(num1))
 		
 	SiNo
 		
-		salida =  MCD(num1, num2)
+		si salida <> ""  Entonces
+			
+			salida = "El maximo comun divisor de "
+			salida = Concatenar(salida, ConvertirATexto(num1))
+			salida = Concatenar(salida, " y ")
+			salida = Concatenar(salida, ConvertirATexto(num2))
+			salida = Concatenar(salida, " es: ")
+			salida = Concatenar(salida, ConvertirATexto(retorno))
+			
+		SiNo
+			
+			salida =  MCD(num1 MOD num2, num2 )
+			
+		FinSi
+		
+		
 		
 	FinSi
+
+	
+
 	
 FinFuncion
 	
