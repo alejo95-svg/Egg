@@ -24,15 +24,15 @@ Algoritmo sin_titulo
 FinAlgoritmo
 
 SubProceso  rellenarMatriz(tamanio Por Referencia, matriz Por Referencia, matriz1 Por Referencia)
-	Definir i, j,num Como Entero
-	num= 0
+	Definir i, j Como Entero
+	
 	para i = 0 Hasta tamanio[0] - 1 Hacer
 		
 		para j = 0 Hasta tamanio[1] - 1 Hacer
 		
-			matriz[i,j] = num//Aleatorio(0,50)
-			matriz1[i,j] = Aleatorio(0,50)
-			num = num + 1
+			matriz[i,j] = Aleatorio(0,100)
+			matriz1[i,j] = Aleatorio(0,100)
+
 		FinPara
 		
 	FinPara
@@ -40,7 +40,8 @@ SubProceso  rellenarMatriz(tamanio Por Referencia, matriz Por Referencia, matriz
 FinSubProceso
 
 SubAlgoritmo multiplicacionMAtrices(tamanio Por Referencia, matriz Por Referencia, matriz1 Por Referencia)
-	definir i, j, l, cont, MatrizMultiplicacion Como Entero
+	definir i, j, cont, MatrizMultiplicacion Como Entero
+	Definir plus Como Caracter
 	
 	Dimension MatrizMultiplicacion[3,3]
 	
@@ -64,25 +65,33 @@ SubAlgoritmo multiplicacionMAtrices(tamanio Por Referencia, matriz Por Referenci
 			
 			Escribir Sin Saltar " | ",matriz[i,j]," | "
 			
-//			Escribir matriz1[i,j]
-				
-//				para l = 0 Hasta tamanio[1] - 1 Hacer
-//					
-//					Escribir Sin Saltar " | ",matriz1[i,l]," | "
-//					
-//				FinPara
-//				
-//				Escribir ""
-			
 		FinPara
 
 		si cont = 1 Entonces
-			Escribir Sin Saltar "+"
+			plus = "*"
+		SiNo
+			plus = " "
 		FinSi
 		
-		para l = 0 Hasta tamanio[1] - 1 Hacer
+		Escribir Sin Saltar "  ",plus ,"  "
+
+		para j = 0 Hasta tamanio[1] - 1 Hacer
 			
-			Escribir Sin Saltar " | ",matriz1[i,l]," | "
+			Escribir Sin Saltar " | ",matriz1[i,j]," | "
+			
+		FinPara
+		
+		si cont = 1 Entonces
+			plus = "="
+		SiNo
+			plus = " "
+		FinSi
+		
+		Escribir Sin Saltar "  ",plus ,"  "
+		
+		para j = 0 Hasta tamanio[1] - 1 Hacer
+			
+			Escribir Sin Saltar " | ",MatrizMultiplicacion[i,j]," | "
 			
 		FinPara
 		
