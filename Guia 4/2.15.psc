@@ -38,11 +38,10 @@ SubProceso formulario (filas Por Valor, columnas Por Valor, form Por Referencia)
 FinSubProceso
 
 SubProceso relleno_form(filas Por Valor, columnas Por Valor, form Por Referencia)
-	definir i, j, suma_dia, total_producto, max, producto_mas_vendido, iterador Como Entero
+	definir i, j, suma_dia, total_producto, producto_mas_vendido, iterador Como Entero
 	
 	suma_dia = 0
 	total_producto = 0 
-	max = 0
 	producto_mas_vendido = 0
 	
 	para i = 1 Hasta filas - 1 Hacer
@@ -50,39 +49,58 @@ SubProceso relleno_form(filas Por Valor, columnas Por Valor, form Por Referencia
 		para j = 1 Hasta columnas - 3 Hacer
 			
 			form[i,j] = ConvertirATexto(Aleatorio(0,9))
-			
-			suma_dia = suma_dia + ConvertirANumero(form[i,1])
-		
 			total_producto = total_producto + ConvertirANumero(form[i,j])
 			
-			max = total_producto
-			
-			form[6,j] = ConvertirATexto(suma_dia)
-			
 		FinPara
-		
-		suma_dia = 0
-		
-		si producto_mas_vendido < max Entonces
-			
-			producto_mas_vendido = max
-			iterador = i
-			
-		FinSi
 	
 		form[i,6] = ConvertirATexto(total_producto)
-		form[i, 7] = "x"
-		
+		total_producto = 0
 		
 	FinPara
 	
-	form[iterador, 7] = ConvertirATexto(producto_mas_vendido) ////
+	para j = 1 Hasta columnas - 2 Hacer
+		
+		para i = 1 hasta filas - 2 Hacer
+			
+			suma_dia = suma_dia + ConvertirANumero(form[i ,j])
+			
+		FinPara
+		
+		form[6,j] = ConvertirATexto(suma_dia)
+		suma_dia = 0
+		
+	FinPara
 	
+	para i = 1 Hasta filas - 2 Hacer
+		
+		si ConvertirANumero(form[i,6]) > producto_mas_vendido Entonces
+			
+			producto_mas_vendido = ConvertirANumero(form[i,6])
+
+		FinSi
+		
+	FinPara
 	
+	para i = 1 Hasta filas - 1 Hacer
+			
+		si ConvertirANumero(form[i,6]) = producto_mas_vendido Entonces
+			
+			form[i, 7] = ConvertirATexto(producto_mas_vendido)
+			
+		SiNo
+				
+			form[i, 7] = "x"
+				
+		FinSi
+			
+	FinPara
+
 FinSubProceso
 
 SubProceso mostrar_form(filas Por Valor, columnas Por Valor, form Por Referencia)
 	definir i,j Como Entero
+	
+	Escribir "______________________________________________________________________________________________________________________________________________________________________"
 	
 	para i = 0 Hasta filas - 1 Hacer
 		
@@ -96,17 +114,26 @@ SubProceso mostrar_form(filas Por Valor, columnas Por Valor, form Por Referencia
 			
 			si i >= 1 y j >= 1 Entonces
 				
-				escribir Sin Saltar "|         ",form[i,j], "          |"
+				segun Longitud(form[i,j])
+					
+					caso 1:
+						escribir Sin Saltar "|         ",form[i,j], "          |"
+					caso 2:
+						escribir Sin Saltar "|         ",form[i,j], "         |"
+					caso 3: 
+						escribir Sin Saltar "|         ",form[i,j], "        |"
+						
+				FinSegun
 				
 			FinSi
 			
 		FinPara
 		
-		
-		
 		Escribir ""
 		
 	FinPara
+	
+	Escribir "______________________________________________________________________________________________________________________________________________________________________"
 	
 FinSubProceso
 	
