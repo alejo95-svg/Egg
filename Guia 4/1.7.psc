@@ -12,7 +12,9 @@ Algoritmo sin_titulo
 	Dimension arregloA[tamanio]
 	Dimension arregloB[tamanio]
 	
-	relleno_arreglos(tamanio, arregloA, arregloB)
+	relleno_arreglos(tamanio, arregloA)
+	relleno_arreglos(tamanio, arregloB)
+	
 	bandera = verificacion(tamanio, arregloA, arregloB)
 	
 	si bandera = Verdadero Entonces
@@ -20,15 +22,15 @@ Algoritmo sin_titulo
 	SiNo
 		Escribir "los dos arreglos no son iguales."
 	FinSi
+	
 FinAlgoritmo
 
-SubProceso relleno_arreglos(tamanio Por Valor, arregloA Por Referencia, arregloB Por Referencia)
+SubProceso relleno_arreglos(tamanio Por Valor, arreglo Por Referencia)
 	Definir i Como Entero
 	
 	para i = 0 Hasta tamanio - 1 Hacer
 		
-		arregloA[i] = Aleatorio(1, 2)
-		arregloB[i] = Aleatorio(1,2)
+		arreglo[i] = Aleatorio(1, 2)
 		
 	FinPara
 	

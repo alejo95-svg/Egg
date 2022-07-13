@@ -24,7 +24,6 @@ Algoritmo sin_titulo
 	esperar 1 Segundos
 	Borrar Pantalla
 	
-	
 	Dimension matriz[m,m]
 	
 	llenarMatriz(m,matriz)
@@ -35,13 +34,15 @@ FinAlgoritmo
 
 SubProceso llenarMatriz(m Por Valor, matriz Por Referencia)
 	Definir i, j, num Como Entero
+	i = 0
+	j = 0
 	
+	Mientras i <> m y j <> m Hacer
 	
 	para i = 0 Hasta m - 1 Hacer
 		
 		para j = 0 Hasta m - 1 Hacer
-			
-			Mientras i <> m y j <> m Hacer
+				
 				Escribir "posicion [",i,",",j,"]"
 				Escribir "Ingrese un numero:"
 				leer num
@@ -53,12 +54,12 @@ SubProceso llenarMatriz(m Por Valor, matriz Por Referencia)
 					Esperar 1 Segundos
 					Borrar Pantalla
 				FinSi
-
-			Fin Mientras
 			
 		FinPara
 		
 	FinPara
+	
+Fin Mientras
 	
 FinSubProceso
 
@@ -99,6 +100,5 @@ SubProceso MatrizMagica(m Por Valor, matriz Por Referencia)
 	SiNo
 		Escribir "La matriz no es magica."
 	FinSi
-	
 	
 FinSubProceso

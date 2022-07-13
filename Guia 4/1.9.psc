@@ -27,9 +27,10 @@ Algoritmo sin_titulo
 		
 	FinPara
 		
-		Escribir ""
+	Escribir ""
 		
-		buscar(tamanio,matriz)
+	buscar(tamanio,matriz)
+	
 FinAlgoritmo
 
 
@@ -74,6 +75,7 @@ SubProceso buscar(tamanio Por Valor, matriz Por Referencia)
 				ubicacion[1] = j
 				
 				escribir "> [",ubicacion[0],",",ubicacion[1],"]"
+				
 			SiNo
 				
 				cont = cont + 1

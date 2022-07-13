@@ -32,7 +32,7 @@ SubProceso llenarMatriz(m Por Valor,word Por Referencia, matriz Por Referencia)
 		para j = 0 Hasta m - 1 Hacer
 				
 			matriz[i,j] = Subcadena(word, j + aux, j + aux)
-			Escribir sin saltar matriz[i,j]
+			
 			cont = cont + 1
 			
 			si j = 2 Entonces
@@ -40,7 +40,9 @@ SubProceso llenarMatriz(m Por Valor,word Por Referencia, matriz Por Referencia)
 			FinSi
 			
 		FinPara
+		
 		Escribir ""
+		
 	FinPara
 	
 FinSubProceso

@@ -26,11 +26,11 @@ SubProceso llenarMatriz(m Por Valor, matriz Por Referencia)
 	
 	para i = 0 Hasta m - 1 Hacer
 		
-		para j = 0 Hasta m - 1 Hacer
+		para j = m - 1 Hasta 0 Hacer
 			
-			si i = j Entonces
+			si i = (m - 1) - j Entonces //i = j
 				
-				matriz[i,j] = 0
+				matriz[j,i] = 0
 				
 			SiNo
 				

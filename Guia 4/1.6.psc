@@ -8,6 +8,7 @@ Algoritmo sin_titulo
 	
 	Escribir "Ingrese una frase:"
 	leer word
+	
 	Conversion(word, vector_word)
 	char(vector_word, bandera)
 	
@@ -32,8 +33,8 @@ SubProceso Conversion (word Por Valor, vector_word Por Referencia)
 FinFuncion
 
 SubProceso Char(vector Por Referencia, bandera Por Referencia)
-	Definir i Como Entero
-	Definir letter, posicion Como Caracter
+	Definir i, posicion Como Entero
+	Definir letter Como Caracter
 	
 	Escribir "Que caracter que desea agregar a la palabra:"
 	leer letter

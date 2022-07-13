@@ -38,6 +38,7 @@ Funcion salida = NumeroMayor(tamanio, Vector)
 		si Vector[i] > max Entonces
 			max = Vector[i]
 		FinSi
+		
 		Borrar Pantalla
 		
 	FinPara

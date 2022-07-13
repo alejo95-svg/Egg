@@ -32,7 +32,7 @@ SubProceso rellenar(tamanio Por Valor, matriz Por Referencia)
 			Escribir "Ingrese el valor para la posicion [",i,",",j,"]"
 			leer num
 			matriz[i,j] = num
-			
+			Borrar Pantalla
 		FinPara
 		
 	FinPara

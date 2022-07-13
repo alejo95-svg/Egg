@@ -45,6 +45,11 @@ SubProceso NotasDeficientes(tamanio Por Valor, vector Por Referencia)
 		
 	FinPara
 	
+//	segun vector[i] Hacer
+//		
+//	0 o 1 o 2 o 3 o 4 o 5:	
+//	FinSegun
+	
 	Escribir "La cantidad de estudiantes con nota deficiente fue ", cont
 	
 FinSubProceso
